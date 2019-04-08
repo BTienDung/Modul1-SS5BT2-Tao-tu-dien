@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="text">
+    <input id="check" type="button" onclick="Search()"; value="Search">
+    <div id="ketqua"></div>
+    <script>
+        function Search() {
+            let arrE = ['Hello', 'Goodbye', 'ThankYou'];
+            let arrV = ['Xin chao', 'Tam biet', 'Cam on'];
+            let timkem = document.getElementById('text').value;
+            //Ham index of dung de xac dinh vi tri
+            // neu =-1 thì có nghia la se ko bao gio xay ra
+            // !=-1 thì sẽ xảy ra
+            for (i=0;i<arrE.length;i++){
+                if (arrE.indexOf(timkem) !== -1){
+                    document.getElementById('ketqua').innerHTML='Tu tieng viet la: '+arrV[arrE.indexOf(timkem)];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
